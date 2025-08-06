@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>DiKomAll</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="assets/style.css" rel="stylesheet">
+
+    <style>
+        .glossary-item:hover {
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+        .section-header {
+            border-bottom: 2px solid #3959a8;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            margin-top: 50px;
+        }
+        .back-to-top {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 1000;
+            display: none;
+        }
+        .partner-logo {
+            max-width: 100%;
+            height: auto;
+            margin: 5% 0;
+        }
+        
+        /* Überschreiben der Bootstrap-Button-Farben */
+        .btn-primary {
+            background-color: #ff8000; /* Orange aus dem Projektlogo */
+            border-color: #ff8000;
+            color: #fff; /* Schriftfarbe weiß */
+        }
+        .btn-primary:hover {
+            background-color: #e67300; /* Etwas dunkleres Orange für den Hover-Effekt */
+            border-color: #e67300;
+        }
+        .btn-outline-primary {
+            color: #ff8000;
+            border-color: #ff8000;
+        }
+        .btn-outline-primary:hover {
+            background-color: #ff8000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="page-top">
+        <div class="container" style="border-bottom: 2px solid #3959a8;">
+            <div class="row">
+                <div class="col-4"> </div>
+                <div class="col-4">
+                    <img src="assets/logos/version 1_orange.jpg" class="img-fluid"
+                        style="margin-left: 0%; margin-top: 5%; margin-bottom: 5%;" />
+                </div>
+                <div class="col-4"> </div>
+            </div>
+            
+            <div class="container my-2 d-md-none">
+                <p class="text-center">
+                    <a class="btn btn-primary" data-bs-toggle="collapse" href="#partnerLogos" role="button" aria-expanded="false"
+                        aria-controls="partnerLogos">
+                        Partnerlogos anzeigen
+                    </a>
+                </p>
+            </div>
+            <div class="row collapse d-md-block" id="partnerLogos">
+                <div class="col-12">
+                    <div class="row align-items-center">
+                        <div class="col-6 col-sm text-center">
+                            <a href="https://www.hochschule-bochum.de/fbg/team/kessler/" target=”_blank”
+                                rel="noopener noreferrer">
+                                <img src="assets/logos/hsbo/hsbo_logo_RGB_Complete_Wide.svg" class="img-fluid"
+                                    alt="Logo der Hochschule Bochum" />
+                            </a>
+                        </div>
+                        <div class="col-6 col-sm text-center">
+                            <a href="https://www.hf.uni-koeln.de/42567" target=”_blank” rel="noopener noreferrer">
+                                <img src="assets/logos/koeln/koeln_logo.png" class="img-fluid"
+                                    alt="Logo der Universität zu Köln" />
+                            </a>
+                        </div>
+                        <div class="col-6 col-sm text-center">
+                            <a href="https://www.erzwiss.uni-leipzig.de/institut-fuer-foerderpaedagogik/professuren/professur-fuer-paedagogik-im-foerderschwerpunkt-geistige-entwicklung"
+                                target=”_blank” rel="noopener noreferrer">
+                                <img src="assets/logos/leipzig/LOGO_UL.jpg" class="img-fluid"
+                                    alt="Logo der Universität Leipzig" />
+                            </a>
+                        </div>
+                        <div class="col-6 col-sm text-center">
+                            <a href="http://www.stadtraummonitor.bioeg.de/" target=”_blank” rel="noopener noreferrer">
+                                <img src="assets/logos/bzga/BIOEG_Logo_DE_RGB_pos.png" class="img-fluid"
+                                    alt="Logo der BZgA" />
+                            </a>
+                        </div>
+                        <div class="col-6 col-sm text-center">
+                            <a href="https://www.bochum.de/Startseite" target=”_blank” rel="noopener noreferrer">
+                                <img src="assets/logos/stadt_bo/stadt_bochum_logo_royalblau.jpg" class="img-fluid"
+                                    alt="Logo der Stadt Bochum" />
+                            </a>
+                        </div>
+                        <div class="col-6 col-sm text-center">
+                            <a href="https://planersocietaet.de/" target=”_blank” rel="noopener noreferrer">
+                                <img src="assets/logos/planersocietaet/Logo_PS_RGB_RZ.svg" class="img-fluid"
+                                    alt="Logo der Planersocietät" />
+                            </a>
+                        </div>
+                        <div class="col-6 col-sm text-center">
+                            <a href="https://www.wittekindshof.de/" target=”_blank” rel="noopener noreferrer">
+                                <img src="assets/logos/wittekindshof/Logo_Wittekindshof.jpg" class="img-fluid"
+                                    alt="Logo des Wittekindshofs" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container mt-4 mb-4">
+            <h3 class="text-center">Auf einen Blick</h3>
+            <ul class="nav justify-content-center flex-wrap">
+                <li class="nav-item">
+                    <a class="nav-link" href="#motivation-section">Unser Projekt</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#team-section">Unser Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#ebook-section">E-Book</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#arbeit-section">Unsere Arbeit</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#galerie-section">Galerie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#glossar-section">Glossar</a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="container" style="padding-top: 5%;" id="motivation-section">
+            <div class="spalten">
+                <h3>Unser Projekt</h3>
+                <h4>
+                    In unserem Projekt DiKomAll arbeiten wir gemeinsam mit Co-Forschenden, die eine geistige Behinderung haben. Sie sind Expertinnen und Experten für Barrieren und wissen genau, was die Stadt einfacher machen kann. Gemeinsam entwickeln wir einfache digitale Werkzeuge, mit denen alle Menschen an der Planung ihrer Stadt mitmachen können.
+                    <br><br>
+                    Das Ziel ist, dass niemand ausgeschlossen wird. Wir wollen, dass die Meinung von allen zählt, auch von denen, die sonst oft nicht gefragt werden. So bauen wir eine Stadt für alle.
+                </h4>
+            </div>
+        </div>
+
+        <div class="container mt-5" id="team-section">
+            <h2 class="section-header">Unser Team</h2>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <img src="assets/placeholder_group_photo.jpg" class="img-fluid" alt="Gruppenfoto des DiKomAll Teams">
+                    <p class="mt-2">Hier sehen Sie unser gesamtes Projektteam bei einem unserer Treffen.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5" id="ebook-section">
+            <h2 class="section-header">Unser E-Book</h2>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h4>Erfahren Sie mehr über unser Projekt in unserem E-Book mit Bildern und Texten.</h4>
+                    <p>
+                        <a href="assets/ebook_link.pdf" class="btn btn-primary btn-lg mt-3" role="button" aria-disabled="true">
+                            E-Book ansehen (mit Vorlesefunktion)
+                        </a>
+                    </p>
+                    <div style="display:inline-block;vertical-align:top;width:300px;margin:20px auto;color:#333;background:#fff;border:1px solid #ddd;line-height:1.2;text-decoration:none;padding:0"><a href="https://read.bookcreator.com/HpGMitP9r1hU9qpsqRMDwPBkacB3/atPCfarrQ9O8M6lU_sKNgA" style="display:block;color:#333;line-height:1.2;text-decoration:none;padding:0;font-weight:normal" target="_blank" rel="noreferrer"><img src="https://assets.api.bookcreator.com/HpGMitP9r1hU9qpsqRMDwPBkacB3/books/atPCfarrQ9O8M6lU_sKNgA/cover/share" style="max-height:300px;max-width:100%;display:block;margin:0 auto;padding:0;border:none" alt="Zusammenarbeit in inklusiven Teams"/></a><div style="display:block;padding:20px;overflow:hidden;overflow-x:hidden;border-top:1px solid #ddd"><div style="display:block;color:#333;line-height:1.2;text-decoration:none;padding:0;font-weight:normal;font-size:21px;margin:0 0 0.25em"><a href="https://read.bookcreator.com/HpGMitP9r1hU9qpsqRMDwPBkacB3/atPCfarrQ9O8M6lU_sKNgA" style="display:block;color:#333;line-height:1.2;text-decoration:none;padding:0;font-weight:normal" target="_blank" rel="noreferrer">Zusammenarbeit in inklusiven Teams</a></div><div style="display:block;color:#333;line-height:1.2;text-decoration:none;padding:0;font-weight:normal;font-size:16px;margin:0 0 0.5em"><a href="https://read.bookcreator.com/HpGMitP9r1hU9qpsqRMDwPBkacB3/atPCfarrQ9O8M6lU_sKNgA" style="display:block;color:#333;line-height:1.2;text-decoration:none;padding:0;font-weight:normal" target="_blank" rel="noreferrer">Click to read this book, made with Book Creator</a></div><div style="display:block;color:#455a64;line-height:1.2;text-decoration:none;padding:0;font-weight:bold;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px"><a href="https://read.bookcreator.com/HpGMitP9r1hU9qpsqRMDwPBkacB3/atPCfarrQ9O8M6lU_sKNgA" style="display:block;color:#333;line-height:1.2;text-decoration:none;padding:0;font-weight:normal" target="_blank" rel="noreferrer">read.bookcreator.com</a></div></div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5" id="arbeit-section">
+            <h2 class="section-header">Unsere Arbeit</h2>
+
+            <div class="team-section mt-4 mb-5">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="assets/placeholder_project_1.jpg" class="img-fluid" alt="Bild des Teilprojekts 1">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Team Raumplanung und Geoinformatik</h3>
+                        <h4>Das machen wir:</h4>
+                        <p>Hier beschreibt das Team seine Forschungsarbeit in Leichter Sprache. Zum Beispiel: "Wir schauen uns an, wie Menschen sich in der Stadt bewegen und wo es für sie schwer ist. Wir nutzen dafür eine Karte auf dem Computer."</p>
+                        <br>
+                        <h4>Erfahrungsbericht eines Co-Forschenden:</h4>
+                        <blockquote class="blockquote">
+                            <p class="mb-0">"Die Arbeit hat mir Spaß gemacht, weil ich zeigen konnte, wo es viele laute Autos gibt."</p>
+                            <footer class="blockquote-footer">Ein Co-Forschender</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-section mt-4 mb-5">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="assets/placeholder_project_2.jpg" class="img-fluid" alt="Bild des Teilprojekts 2">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>Team Pädagogik und Inklusion</h3>
+                        <h4>Das machen wir:</h4>
+                        <p>Hier beschreibt das Team seine Forschungsarbeit in Leichter Sprache. Zum Beispiel: "Wir überlegen uns, wie wir am besten miteinander sprechen können, damit alle alles verstehen. Wir probieren aus, was gut klappt."</p>
+                        <br>
+                        <h4>Erfahrungsbericht eines Co-Forschenden:</h4>
+                        <blockquote class="blockquote">
+                            <p class="mb-0">"Ich finde es gut, dass wir uns gegenseitig zuhören. Das ist wichtig."</p>
+                            <footer class="blockquote-footer">Eine Co-Forschende</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5" id="galerie-section">
+            <h2 class="section-header">Ergebnisse in Bildern und Skizzen</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/placeholder_drawing_1.jpg" class="card-img-top" alt="Skizze eines Co-Forschenden">
+                        <div class="card-body">
+                            <h5 class="card-title">Skizze: Mein Weg zur Arbeit</h5>
+                            <p class="card-text">Eine Skizze, die den Weg eines Co-Forschenden zeigt und aufzeigt, wo es viele Barrieren gibt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/placeholder_video_1.jpg" class="card-img-top" alt="Vorschaubild eines Videos">
+                        <div class="card-body">
+                            <h5 class="card-title">Video: Das Projekt im Schnelldurchlauf</h5>
+                            <p class="card-text">Ein kurzer Film, der die Arbeit des Teams erklärt.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="assets/placeholder_map.jpg" class="card-img-top" alt="Karte eines Co-Forschenden">
+                        <div class="card-body">
+                            <h5 class="card-title">Karte: So sieht meine Nachbarschaft aus</h5>
+                            <p class="card-text">Eine Karte, die von einem Co-Forschenden erstellt wurde, um wichtige Orte zu zeigen.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5" id="glossar-section">
+            <h2 class="section-header">Wichtige Wörter einfach erklärt</h2>
+            <div class="row">
+                <div class="col-12">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item list-group-item-action glossary-item">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Kommunale Planung</h5>
+                            </div>
+                            <p class="mb-1">Das sind die Pläne, die eine Stadt macht. Zum Beispiel, wo neue Straßen gebaut werden oder wie Spielplätze aussehen sollen.</p>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action glossary-item">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Barriere</h5>
+                            </div>
+                            <p class="mb-1">Eine Barriere ist ein Hindernis. Das kann eine Stufe sein oder ein schwieriger Text. Barrieren machen es Menschen schwer, irgendwo mitzumachen.</p>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action glossary-item">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Inklusion</h5>
+                            </div>
+                            <p class="mb-1">Inklusion bedeutet, dass alle Menschen dabei sein können. Egal, ob sie alt sind, jung, mit oder ohne Behinderung.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="border-top: 2px solid #3959a8; margin-top: 8%; margin-bottom: 5%;">
+            <div class="col-2"> </div>
+            <div class="col-3">
+                <img src="assets/logos/BMFTR_de_Web_RGB_gef_durch.jpg" class="img-fluid"
+                    style="margin-left: 0%; margin-top: 20%; margin-bottom: 20%; padding-right: 20%;" />
+            </div>
+            <div class="col-2">
+                <img src="assets/logos/2019-05_PT_Lab_Logo_final.jpg" class="img-fluid"
+                    style="margin-left: 0%; margin-top: 65%; margin-bottom: 5%; padding-right: 20%;" />
+            </div>
+            <div class="col-3">
+                <img src="assets/logos/VDIVDE-IT_Logo.png" class="img-fluid"
+                    style="margin-left: 0%; margin-top: 38%; margin-bottom: 5%;" />
+            </div>
+            <div class="col-2"> </div>
+        </div>
+    </div>
+    
+    <a href="#page-top" class="btn btn-primary back-to-top" id="backToTopBtn" aria-label="Nach oben springen">
+        Nach oben
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <script>
+        let mybutton = document.getElementById("backToTopBtn");
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

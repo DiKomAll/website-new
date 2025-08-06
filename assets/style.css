@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Golos Text';
+    src: url('GolosText-VariableFont_wght.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Golos Text', Fallback, sans-serif;
+}
+
+h4 {
+    font-weight: 100;
+}
+
+h4 strong {
+    font-weight: 550;
+}
+
+a:link,
+a:visited {
+    color: #3959a8;
+}
+
+a:hover {
+    color: #1e3368;
+}
+
+
+
+@media (min-width: 1000px) {
+    .spalten {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        -webkit-column-gap: 3em;
+        -moz-column-gap: 3em;
+        column-gap: 3em;
+    }
+}
+
+@media (max-width: 1000px) {
+    .spalten {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        -webkit-column-gap: 3em;
+        -moz-column-gap: 3em;
+        column-gap: 3em;
+    }
+}
