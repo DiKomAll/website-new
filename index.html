@@ -20,8 +20,25 @@
 
     <style>
         .glossary-item:hover {
-            background-color: #f0f0f0;
-            cursor: pointer;
+            background-color: #f8f9fa;
+        }
+        .glossary-search {
+            max-width: 500px;
+            margin: 0 auto 30px auto;
+        }
+        .accordion-button:not(.collapsed) {
+            background-color: #fff4e6;
+            color: #ff8000;
+        }
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(255, 128, 0, 0.25);
+            border-color: #ff8000;
+        }
+        .highlight-ls {
+            border-left: 4px solid #ff8000;
+            padding-left: 15px;
+            margin-top: 10px;
+            font-style: italic;
         }
         .section-header {
             border-bottom: 2px solid #3959a8;
@@ -482,34 +499,310 @@
             </div>
         </div> -->
 
-        <div class="container mt-5" id="glossar-section">
-            <h2 class="section-header">Wichtige Wörter einfach erklärt</h2>
-            <div class="row">
-                <div class="col-12">
-                    <div class="list-group">
-                        <div class="list-group-item glossary-item">
-                            <h5 class="mb-1">Kommunale Planung</h5>
-                            <p class="mb-1">Das sind die Pläne, die eine Stadt macht. Zum Beispiel, wo neue Straßen gebaut werden oder wie Spielplätze aussehen sollen.</p>
+            <div class="accordion" id="glossaryAccordion">
+                <!-- Barriere -->
+                <div class="accordion-item glossary-entry">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBarriere">
+                            Barriere
+                        </button>
+                    </h2>
+                    <div id="collapseBarriere" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            Ein Hindernis. Das kann eine Stufe sein oder ein schwieriger Text. Barrieren machen es Menschen schwer, irgendwo mitzumachen.
                         </div>
-                        <div class="list-group-item glossary-item">
-                            <h5 class="mb-1">Barriere</h5>
-                            <p class="mb-1">Eine Barriere ist ein Hindernis. Das kann eine Stufe sein oder ein schwieriger Text. Barrieren machen es Menschen schwer, irgendwo mitzumachen.</p>
+                    </div>
+                </div>
+
+                <!-- BImSchG -->
+                <div class="accordion-item glossary-entry">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBimschg">
+                            BImSchG (Bundes-Immissionsschutz-Gesetz)
+                        </button>
+                    </h2>
+                    <div id="collapseBimschg" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            Deutsches Bundesgesetz zum Schutz vor schädlichen Umwelteinwirkungen (wie Lärm oder Luftverschmutzung).
                         </div>
-                        <div class="list-group-item glossary-item">
-                            <h5 class="mb-1">Inklusion</h5>
-                            <p class="mb-1">Inklusion bedeutet, dass alle Menschen dabei sein können. Egal, ob sie alt sind, jung, mit oder ohne Behinderung.</p>
+                    </div>
+                </div>
+
+                <!-- BImSchV -->
+                <div class="accordion-item glossary-entry">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBimschv">
+                            BImSchV (Bundes-Immissionsschutzverordnung)
+                        </button>
+                    </h2>
+                    <div id="collapseBimschv" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            Regeln (Verordnungen), die genau sagen, wie das Bundes-Immissionsschutz-Gesetz umgesetzt werden muss.
                         </div>
-                        <div class="list-group-item glossary-item">
-                            <h5 class="mb-1">Co-Forschung</h5>
-                            <p class="mb-1">Das bedeutet: Menschen mit sogenannter geistiger Behinderung arbeiten als Experten im Projekt mit. Sie forschen gemeinsam mit den Wissenschaftlern.</p>
+                    </div>
+                </div>
+
+                <!-- CNOSSOS-EU -->
+                <div class="accordion-item glossary-entry">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCnossos">
+                            CNOSSOS-EU
+                        </button>
+                    </h2>
+                    <div id="collapseCnossos" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            Ein europaweit einheitliches Berechnungsverfahren für Lärm. So kann man Lärm in verschiedenen Ländern besser vergleichen.
                         </div>
-                        <div class="list-group-item glossary-item">
-                            <h5 class="mb-1">Leichte Sprache</h5>
-                            <p class="mb-1">Leichte Sprache ist eine sehr einfache Sprache. So können Menschen Informationen besser verstehen, wenn sie Schwierigkeiten beim Lesen haben.</p>
+                    </div>
+                </div>
+
+                <!-- Co-Forschung -->
+                <div class="accordion-item glossary-entry">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCoforschung">
+                            Co-Forschung
+                        </button>
+                    </h2>
+                    <div id="collapseCoforschung" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            Menschen mit Behinderung arbeiten als Experten im Projekt mit. Sie forschen gemeinsam mit den Wissenschaftlern auf Augenhöhe.
                         </div>
-                        <div class="list-group-item glossary-item">
-                            <h5 class="mb-1">Digitalisierung</h5>
-                            <p class="mb-1">Das bedeutet, dass man Computer, Internet und Apps benutzt, um Aufgaben einfacher zu machen.</p>
+                    </div>
+                </div>
+
+                <!-- Digitalisierung -->
+                <div class="accordion-item glossary-entry">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDigitalisierung">
+                            Digitalisierung
+                        </button>
+                    </h2>
+                    <div id="collapseDigitalisierung" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            Das Benutzen von Computern, Internet und Apps, um Aufgaben einfacher und moderner zu machen.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EU-Umgebungslärmrichtlinie -->
+                <div class="accordion-item glossary-entry">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEuLaerm">
+                            EU-Umgebungslärmrichtlinie
+                        </button>
+                    </h2>
+                    <div id="collapseEuLaerm" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            Eine Richtlinie aus Europa, die vorschreibt, wie Lärm bewertet und bekämpft werden muss.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fachplan Gesundheit -->
+                <div class="accordion-item glossary-entry">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFachplan">
+                            Fachplan Gesundheit
+                        </button>
+                    </h2>
+                    <div id="collapseFachplan" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            Ein Plan einer Stadt, um die Gesundheit der Menschen zu fördern. Er hilft der Stadtverwaltung, gesundheitsbezogene Ziele und Projekte festzulegen.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GIS -->
+                <div class="accordion-item glossary-entry">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGis">
+                            GIS (Geographisches Informations-System)
+                        </button>
+                    </h2>
+                    <div id="collapseGis" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            Eine "schlaue digitale Landkarte". Sie zeigt nicht nur Straßen, sondern auch Infos wie "Wo wohnen viele Kinder?" oder "Wo ist es laut?".
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inklusion -->
+                <div class="accordion-item glossary-entry">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInklusion">
+                            Inklusion
+                        </button>
+                    </h2>
+                    <div id="collapseInklusion" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            Inklusion bedeutet, dass alle Menschen dabei sein können. Egal, ob sie alt sind, jung, mit oder ohne Behinderung.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KomMonitor -->
+                <div class="accordion-item glossary-entry">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseKommonitor">
+                            KomMonitor
+                        </button>
+                    </h2>
+                    <div id="collapseKommonitor" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            Ein spezielles Computer-Programm für Städte. Es hilft dabei, wichtige Daten (wie Lärm oder Hitze) auf Karten zu zeigen, damit die Stadt besser planen kann.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lärmaktionsplan -->
+                <div class="accordion-item glossary-entry">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLaermplan">
+                            Lärmaktionsplan
+                        </button>
+                    </h2>
+                    <div id="collapseLaermplan" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            Ein Plan mit konkreten Schritten, um den Lärm in einer Stadt weniger zu machen und ruhige Gebiete zu schützen.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lärmindizes -->
+                <div class="accordion-item glossary-entry">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLaermindizes">
+                            Lärmindizes
+                        </button>
+                    </h2>
+                    <div id="collapseLaermindizes" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            Werte, die die Lärmbelastung zu verschiedenen Zeiten messen:
+                            <ul>
+                                <li><b>LDEN:</b> Der Gesamtwert über den ganzen Tag (00:00 – 24:00 Uhr).</li>
+                                <li><b>LNight:</b> Der Wert für die Nachtruhe (22:00 – 06:00 Uhr).</li>
+                                <li><b>LDay:</b> Der Wert für den Tag (06:00 – 18:00 Uhr).</li>
+                                <li><b>LEvening:</b> Der Wert für den Abend (18:00 – 22:00 Uhr).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lärmkartierung -->
+                <div class="accordion-item glossary-entry">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLaermkartierung">
+                            Lärmkartierung
+                        </button>
+                    </h2>
+                    <div id="collapseLaermkartierung" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            Das Erfassen von Lärmbelastung und das Darstellen auf einer Karte. Das ist die Grundlage für den Lärmaktionsplan.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lärmmindernder Asphalt -->
+                <div class="accordion-item glossary-entry">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAsphalt">
+                            Lärmmindernder Asphalt
+                        </button>
+                    </h2>
+                    <div id="collapseAsphalt" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            Ein spezieller Straßenbelag, der den Schall der Autos "schluckt" und es so leiser macht.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lärmschutzfenster -->
+                <div class="accordion-item glossary-entry">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFenster">
+                            Lärmschutzfenster
+                        </button>
+                    </h2>
+                    <div id="collapseFenster" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            Besondere Fenster, die den Lärm von draußen nicht so stark in die Wohnung lassen. Städte fördern oft den Einbau dieser Fenster in lauten Gebieten.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leichte Sprache -->
+                <div class="accordion-item glossary-entry">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLeichteSprache">
+                            Leichte Sprache
+                        </button>
+                    </h2>
+                    <div id="collapseLeichteSprache" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            Eine sehr einfache Sprache mit kurzen Sätzen. So können Menschen Informationen besser verstehen, wenn sie Schwierigkeiten beim Lesen haben.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Räumliche Datenverarbeitung -->
+                <div class="accordion-item glossary-entry">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDatenverarbeitung">
+                            Räumliche Datenverarbeitung
+                        </button>
+                    </h2>
+                    <div id="collapseDatenverarbeitung" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            Das bedeutet, Informationen mit einem Ort auf der Karte zu verbinden. Zum Beispiel: "An dieser Kreuzung ist es sehr laut". Der Computer hilft dabei, diese Infos zu ordnen.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ruhige Gebiete -->
+                <div class="accordion-item glossary-entry">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRuhigeGebiete">
+                            Ruhige Gebiete
+                        </button>
+                    </h2>
+                    <div id="collapseRuhigeGebiete" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            Bereiche in der Stadt, in denen es wenig Lärm gibt. Diese Gebiete sollen besonders geschützt werden.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- StadtRaumMonitor -->
+                <div class="accordion-item glossary-entry">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStadtraummonitor">
+                            StadtRaumMonitor
+                        </button>
+                    </h2>
+                    <div id="collapseStadtraummonitor" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            Ein Werkzeug, mit dem Menschen bewerten können, wie lebenswert ihr Wohnort ist. Wichtige Themen sind dabei:
+                            <ul>
+                                <li>Mobilität (wie man von A nach B kommt)</li>
+                                <li>Öffentlicher Raum (wie Parks oder Plätze)</li>
+                                <li>Versorgung, Arbeit und Wohnen</li>
+                                <li>Soziales Miteinander</li>
+                                <li>Klimafolgenanpassung (Schutz vor Hitze oder Regen)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Umgebungslärm -->
+                <div class="accordion-item glossary-entry">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUmgebungslaerm">
+                            Umgebungslärm
+                        </button>
+                    </h2>
+                    <div id="collapseUmgebungslaerm" class="accordion-collapse collapse" data-bs-parent="#glossaryAccordion">
+                        <div class="accordion-body">
+                            Lärm, der von draußen kommt. Zum Beispiel von Autos, Zügen, Flugzeugen oder Fabriken.
                         </div>
                     </div>
                 </div>
@@ -543,6 +836,23 @@
         crossorigin="anonymous"></script>
 
     <script>
+        function filterGlossary() {
+            let input = document.getElementById('glossarySearch');
+            let filter = input.value.toLowerCase();
+            let accordion = document.getElementById('glossaryAccordion');
+            let entries = accordion.getElementsByClassName('glossary-entry');
+
+            for (let i = 0; i < entries.length; i++) {
+                let button = entries[i].getElementsByClassName('accordion-button')[0];
+                let text = button.textContent || button.innerText;
+                if (text.toLowerCase().indexOf(filter) > -1) {
+                    entries[i].style.display = "";
+                } else {
+                    entries[i].style.display = "none";
+                }
+            }
+        }
+
         let mybutton = document.getElementById("backToTopBtn");
         window.onscroll = function() {scrollFunction()};
 
