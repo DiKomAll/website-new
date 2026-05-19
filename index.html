@@ -41,6 +41,37 @@
             height: auto;
             margin: 5% 0;
         }
+        .partner-card {
+            height: 100%;
+            border-top: 5px solid #3959a8;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+        .partner-card:hover {
+            transform: translateY(-5px);
+        }
+        .partner-card .card-title {
+            color: #3959a8;
+            font-size: 1.1rem;
+            font-weight: bold;
+            min-height: 3rem;
+            display: flex;
+            align-items: center;
+        }
+        .goal-header {
+            color: #ff8000;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+        .focus-list {
+            padding-left: 1.2rem;
+            font-size: 0.95rem;
+        }
+        .focus-list li {
+            margin-bottom: 5px;
+        }
         
         /* Überschreiben der Bootstrap-Button-Farben */
         .btn-primary {
@@ -175,7 +206,7 @@
                     Das wollen wir ändern.
                     <br><br>
                     In unserem Projekt arbeiten Wissenschaftler und Experten zusammen. 
-                    Einige Experten sind Menschen mit Behinderung. 
+                    Einige Experten sind Menschen mit sogenannter geistiger Behinderung. 
                     Sie wissen am besten, wo es Hindernisse (Barrieren) in der Stadt gibt. 
                     Gemeinsam entwickeln wir Computer-Programme und Apps. 
                     Diese Werkzeuge sollen so einfach sein, dass jeder sie benutzen kann. 
@@ -203,7 +234,7 @@
                 </div>
                 <div class="col-md-4 text-center">
                     <h4>Co-Forschende</h4>
-                    <p>Das sind Menschen mit Behinderung. Sie arbeiten aktiv im Projekt mit. Sie zeigen uns, was sie in der Stadt brauchen.</p>
+                    <p>Das sind Menschen mit sogenannter geistiger Behinderung. Sie arbeiten aktiv im Projekt mit. Sie zeigen uns, was sie in der Stadt brauchen.</p>
                 </div>
             </div>
         </div>
@@ -242,51 +273,179 @@
         </div>
 
         <div class="container mt-5" id="arbeit-section">
-            <h2 class="section-header">Unsere Arbeit</h2>
+            <h2 class="section-header">Unsere Arbeit: Wer macht was?</h2>
+            <p class="mb-5">In unserem Projekt arbeiten viele verschiedene Partner zusammen. Jeder Partner hat eine wichtige Aufgabe. Gemeinsam machen wir die Stadtplanung für alle einfacher.</p>
 
-            <div class="team-section mt-4 mb-5">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="assets/placeholder_project_1.jpg" class="img-fluid" alt="Bild des Teilprojekts 1">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- Partner 1: HS Gesundheit -->
+                <div class="col">
+                    <div class="card partner-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Hochschule Bochum - Gesundheitswissenschaften</h5>
+                            <div class="goal-header">Ziel</div>
+                            <p class="card-text">Mehr Menschen für die Stadtentwicklung erreichen.</p>
+                            <div class="goal-header">Arbeitsschwerpunkte</div>
+                            <ul class="focus-list">
+                                <li>Projektleitung & Koordination</li>
+                                <li>Partizipative Sozialraumanalyse</li>
+                                <li>Wissenschaftliche Evaluation</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-md-8">
-                        <h3>Team Raumplanung und Geoinformatik</h3>
-                        <h4>Das machen wir:</h4>
-                        <p>Wir arbeiten viel mit Karten auf dem Computer. Wir wollen wissen: Wo ist es in der Stadt laut? Wo fahren zu viele Autos? 
-                           Wir benutzen dafür Programme wie <b>KomMonitor</b> oder <b>KoboToolbox</b>. 
-                           Mit diesen Programmen können wir auf einer Karte zeigen, wo es Hindernisse gibt. 
-                           So helfen wir der Stadt, besser zu planen.</p>
-                        <br>
-                        <h4>Das sagt ein Co-Forschender:</h4>
-                        <blockquote class="blockquote">
-                            <p class="mb-0">"Ich habe mit dem Tablet-Computer Fotos von Barrieren gemacht. Das war spannend."</p>
-                            <footer class="blockquote-footer">Ein Co-Forschender</footer>
-                        </blockquote>
+                </div>
+
+                <!-- Partner 2: HS Bochum -->
+                <div class="col">
+                    <div class="card partner-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Hochschule Bochum - Geodäsie</h5>
+                            <div class="goal-header">Ziel</div>
+                            <p class="card-text">Digitale Planungstools barrierefrei gestalten.</p>
+                            <div class="goal-header">Arbeitsschwerpunkte</div>
+                            <ul class="focus-list">
+                                <li>Entwicklung von <b>KomMonitor</b></li>
+                                <li>Barrierefreie Nutzerschnittstellen</li>
+                                <li>Geoinformatik & Datenintegration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Partner 3: Universität Leipzig -->
+                <div class="col">
+                    <div class="card partner-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Universität Leipzig</h5>
+                            <div class="goal-header">Ziel</div>
+                            <p class="card-text">Partizipative Forschung und ethische Reflexion.</p>
+                            <div class="goal-header">Arbeitsschwerpunkte</div>
+                            <ul class="focus-list">
+                                <li>Inklusion im Sozialraum</li>
+                                <li>Forschungsethik im Kontext Behinderung</li>
+                                <li>Leichte Sprache im Arbeitsleben (LeiSA)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Partner 4: Universität zu Köln -->
+                <div class="col">
+                    <div class="card partner-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Universität zu Köln</h5>
+                            <div class="goal-header">Ziel</div>
+                            <p class="card-text">Barrierefreie Wissenschaftskommunikation.</p>
+                            <div class="goal-header">Arbeitsschwerpunkte</div>
+                            <ul class="focus-list">
+                                <li>Wissenschaftskommunikation (LeiSA-parti)</li>
+                                <li>Partizipative Aufbereitung von Wissen</li>
+                                <li>Barrierearme digitale Formate</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Partner 4: Stadt Bochum -->
+                <div class="col">
+                    <div class="card partner-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Stadt Bochum</h5>
+                            <div class="goal-header">Ziel</div>
+                            <p class="card-text">Inklusive Beteiligung in der Praxis erproben.</p>
+                            <div class="goal-header">Arbeitsschwerpunkte</div>
+                            <ul class="focus-list">
+                                <li><b>Lärmaktionsplanung</b></li>
+                                <li><b>Fachplan Gesundheit</b></li>
+                                <li>Kommunale Umsetzung</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Partner 5: BIÖG -->
+                <div class="col">
+                    <div class="card partner-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Bundesinstitut für Öffentliche Gesundheit (BIÖG)</h5>
+                            <div class="goal-header">Ziel</div>
+                            <p class="card-text">Gesunde Stadtentwicklung bundesweit fördern.</p>
+                            <div class="goal-header">Arbeitsschwerpunkte</div>
+                            <ul class="focus-list">
+                                <li>Implementierung <b>StadtRaumMonitor</b></li>
+                                <li>Ergebnis-Verbreitung</li>
+                                <li>Öffentlicher Gesundheitsdienst</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Partner 6: Wittekindshof -->
+                <div class="col">
+                    <div class="card partner-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Wittekindshof</h5>
+                            <div class="goal-header">Ziel</div>
+                            <p class="card-text">Perspektive der Menschen mit sogenannter geistiger Behinderung einbringen.</p>
+                            <div class="goal-header">Arbeitsschwerpunkte</div>
+                            <ul class="focus-list">
+                                <li>Zusammenarbeit mit <b>Co-Forschenden</b></li>
+                                <li>Büro für Leichte Sprache</li>
+                                <li>Lebensraumorientierung</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Partner 7: Planersocietät -->
+                <div class="col">
+                    <div class="card partner-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Planersocietät</h5>
+                            <div class="goal-header">Ziel</div>
+                            <p class="card-text">Praxistransfer in die Verkehrs- und Stadtplanung.</p>
+                            <div class="goal-header">Arbeitsschwerpunkte</div>
+                            <ul class="focus-list">
+                                <li>Kreative Planungsdialoge</li>
+                                <li>Erprobung von Prototypen</li>
+                                <li>Kommunikationsmanagement</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Partner 9: Co-Forschende -->
+                <div class="col">
+                    <div class="card partner-card" style="border-top-color: #ff8000;">
+                        <div class="card-body">
+                            <h5 class="card-title">Co-Forschende</h5>
+                            <div class="goal-header">Ziel</div>
+                            <p class="card-text">Barrieren erkennen und gemeinsam Lösungen auf Augenhöhe entwickeln.</p>
+                            <div class="goal-header">Arbeitsschwerpunkte</div>
+                            <ul class="focus-list">
+                                <li><b>Experten für Barrieren</b>: Einbringen ihrer Perspektiven</li>
+                                <li>Co-Creation-Prozesse in Arbeitsgruppen mit allen Partnern</li>
+                                <li>Aktive Begleitung des gesamten Projekts</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="team-section mt-4 mb-5">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img src="assets/placeholder_project_2.jpg" class="img-fluid" alt="Bild des Teilprojekts 2">
-                    </div>
-                    <div class="col-md-8">
-                        <h3>Team Pädagogik und Inklusion</h3>
-                        <h4>Das machen wir:</h4>
-                        <p>Wir überlegen uns: Wie können wir Informationen so geben, dass sie jeder versteht? 
-                           Wir benutzen oft <b>Leichte Sprache</b>. 
-                           Wir probieren auch aus, wie wir in der Gruppe am besten zusammenarbeiten können. 
-                           Denn nur wenn wir uns gegenseitig verstehen, können wir gute Ergebnisse erzielen.</p>
-                        <br>
-                        <h4>Das sagt eine Co-Forschende:</h4>
-                        <blockquote class="blockquote">
-                            <p class="mb-0">"Es ist gut, dass wir uns Zeit lassen beim Reden. So kommen alle mit."</p>
-                            <footer class="blockquote-footer">Eine Co-Forschende</footer>
-                        </blockquote>
-                    </div>
+            <!-- Zitat-Bereich für den menschlichen Aspekt -->
+            <!-- <div class="row mt-5">
+                <div class="col-md-6">
+                    <blockquote class="blockquote border-start border-4 border-primary ps-3">
+                        <p class="mb-0">"Ich habe mit dem Tablet-Computer Fotos von Barrieren gemacht. Das war spannend."</p>
+                        <footer class="blockquote-footer mt-1">Ein Co-Forschender</footer>
+                    </blockquote>
                 </div>
-            </div>
+                <div class="col-md-6">
+                    <blockquote class="blockquote border-start border-4 border-primary ps-3">
+                        <p class="mb-0">"Es ist gut, dass wir uns Zeit lassen beim Reden. So kommen alle mit."</p>
+                        <footer class="blockquote-footer mt-1">Eine Co-Forschende</footer>
+                    </blockquote>
+                </div>
+            </div> -->
         </div>
 
         <!-- Galerie - aktuell ausgeblendet  -->
@@ -342,7 +501,7 @@
                         </div>
                         <div class="list-group-item glossary-item">
                             <h5 class="mb-1">Co-Forschung</h5>
-                            <p class="mb-1">Das bedeutet: Menschen mit Behinderung arbeiten als Experten im Projekt mit. Sie forschen gemeinsam mit den Wissenschaftlern.</p>
+                            <p class="mb-1">Das bedeutet: Menschen mit sogenannter geistiger Behinderung arbeiten als Experten im Projekt mit. Sie forschen gemeinsam mit den Wissenschaftlern.</p>
                         </div>
                         <div class="list-group-item glossary-item">
                             <h5 class="mb-1">Leichte Sprache</h5>
